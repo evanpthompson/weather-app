@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.evanpthompson.address.view.WebAppController">
+   <children>
+      <BorderPane prefHeight="396.0" prefWidth="293.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label text="Current Weather" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <ImageView id="currentConditionIcon" fx:id="weatherIcon" fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_CENTER">
+               <viewport>
+                  <Rectangle2D height="75.0" width="75.0" />
+               </viewport>
+               <BorderPane.margin>
+                  <Insets left="15.0" top="15.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </left>
+         <center>
+            <VBox maxHeight="156.0" maxWidth="484.0" prefHeight="148.0" prefWidth="484.0" BorderPane.alignment="TOP_LEFT">
+               <BorderPane.margin>
+                  <Insets left="15.0" top="15.0" />
+               </BorderPane.margin>
+               <children>
+                  <Label id="currentTempText" fx:id="currentTemp" prefHeight="68.0" prefWidth="484.0" text="Current Temp">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Label>
+                  <Label id="currentOutlookText" fx:id="currentOutlook" ellipsisString="" layoutX="10.0" layoutY="10.0" prefHeight="72.0" prefWidth="484.0" text="Current Outlook" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <HBox maxHeight="200.0" maxWidth="600.0" prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <AnchorPane maxHeight="150.0" maxWidth="600.0" prefHeight="150.0" prefWidth="600.0">
+                     <children>
+                        <BorderPane layoutX="-65.0" layoutY="-69.0" maxHeight="150.0" maxWidth="200.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <top>
+                              <Label fx:id="firstOutlookTitle" text="This Evening" BorderPane.alignment="CENTER" />
+                           </top>
+                           <bottom>
+                              <Label id="tonightTempText" fx:id="firstTemp" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0" text="---" wrapText="true" BorderPane.alignment="BOTTOM_CENTER" />
+                           </bottom>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="85.0" maxWidth="100.0" prefHeight="85.0" prefWidth="100.0">
+                     <children>
+                        <BorderPane maxHeight="150.0" maxWidth="200.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <top>
+                              <Label fx:id="secondOutlookTitle" text="Tomorrow" BorderPane.alignment="CENTER" />
+                           </top>
+                           <bottom>
+                              <Label id="tomorrowTempText" fx:id="secondTemp" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0" text="---" wrapText="true" BorderPane.alignment="BOTTOM_CENTER" />
+                           </bottom>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="85.0" maxWidth="100.0" prefHeight="85.0" prefWidth="100.0">
+                     <children>
+                        <BorderPane maxHeight="150.0" maxWidth="200.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <top>
+                              <Label fx:id="thirdOutlookTitle" text="After Tomorrow" BorderPane.alignment="CENTER" />
+                           </top>
+                           <bottom>
+                              <Label id="nextTempText" fx:id="thirdTemp" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0" text="---" wrapText="true" BorderPane.alignment="BOTTOM_CENTER" />
+                           </bottom>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
